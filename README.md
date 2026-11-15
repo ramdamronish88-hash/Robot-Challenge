@@ -9,16 +9,7 @@ The robot uses an Arduino Uno as its main controller. Two servo motors drive the
 
 ## Project Build
 
-![Arduino Robot Challenge – mechanical assembly and electronics](images/"C:\Users\ronis\Documents\ENGR 120 005 HILL\final robot challenge\WhatsApp Image 2026-11-15 at 00.53.24 (1).jpeg"
-"C:\Users\ronis\Documents\ENGR 120 005 HILL\final robot challenge\WhatsApp Image 2026-11-15 at 00.53.24 (2).jpeg"
-"C:\Users\ronis\Documents\ENGR 120 005 HILL\final robot challenge\WhatsApp Image 2026-11-15 at 00.53.24 (3).jpeg"
-"C:\Users\ronis\Documents\ENGR 120 005 HILL\final robot challenge\WhatsApp Image 2026-11-15 at 00.53.24 (4).jpeg"
-"C:\Users\ronis\Documents\ENGR 120 005 HILL\final robot challenge\WhatsApp Image 2026-11-15 at 00.53.24.jpeg"
-"C:\Users\ronis\Documents\ENGR 120 005 HILL\final robot challenge\WhatsApp Image 2026-11-15 at 00.53.25 (1).jpeg"
-"C:\Users\ronis\Documents\ENGR 120 005 HILL\final robot challenge\WhatsApp Image 2026-11-15 at 00.53.25 (2).jpeg"
-"C:\Users\ronis\Documents\ENGR 120 005 HILL\final robot challenge\WhatsApp Image 2026-11-15 at 00.53.25 (3).jpeg"
-"C:\Users\ronis\Documents\ENGR 120 005 HILL\final robot challenge\WhatsApp Image 2026-11-15 at 00.53.25 (4).jpeg"
-"C:\Users\ronis\Documents\ENGR 120 005 HILL\final robot challenge\WhatsApp Image 2026-11-15 at 00.53.25.jpeg")
+![Arduino Robot Challenge – mechanical assembly and electronics](images/
 
 *The assembled robot, showing the Arduino Uno, breadboard, servo motors, wheel assembly, chassis, and battery holder.*
 
