@@ -1,0 +1,79 @@
+#include <Servo.h>  
+
+//Pin setup
+int sensorPin = A0;      // Photoresistor 
+int greenLED = 7;         // Green LED 
+int redLED = 10;          // Red LED 
+int yellowLED = 12;       // Yellow LED 
+int buttonPin = 8;        // Button 
+
+//sERVOS
+Servo servo1;             
+Servo servo2;
+
+// Light level limits 
+int brightLight = 700;    // Bright light value
+int shadowLight = 300;    // Shadow/dark value
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(greenLED, OUTPUT);
+  pinMode(redLED, OUTPUT);
+  pinMode(yellowLED, OUTPUT);
+  pinMode(buttonPin, INPUT_PULLUP);  
+
+  servo1.attach(5);
+  servo2.attach(2);
+
+  // Stop servos at start
+  servo1.write(90);
+  servo2.write(90);
+}
+
+void loop() {
+  int buttonState = digitalRead(buttonPin);  
+
+  // Button pressed
+  if (buttonState == HIGH) {
+    int lightValue = analogRead(sensorPin);  // Read sensor value
+    Serial.print("Light Sensor: ");
+    Serial.println(lightValue);
+
+    // Turn off all LEDs first
+    digitalWrite(greenLED, LOW);
+    digitalWrite(redLED, LOW);
+    digitalWrite(yellowLED, LOW);
+
+    // Light control 
+    if (lightValue > brightLight) {
+      Serial.println("Bright light → Spin");
+      digitalWrite(redLED, HIGH);
+      servo1.write(180);
+      servo2.write(180);
+    }
+    else if (lightValue > shadowLight) {
+      Serial.println("Normal light → Move Forward");
+      digitalWrite(greenLED, HIGH);
+      servo1.write(130);
+      servo2.write(50);
+    }
+    else {
+      Serial.println("Shadow → Move Backward Slowly");
+      digitalWrite(yellowLED, HIGH);
+      servo1.write(80);
+      servo2.write(100);
+    }
+  }
+
+  // If button is NOT pressed ,  stop everything
+  else {
+    servo1.write(90);
+    servo2.write(90);
+    digitalWrite(greenLED, LOW);
+    digitalWrite(redLED, LOW);
+    digitalWrite(yellowLED, LOW);
+  }
+
+  delay(100);
+}
